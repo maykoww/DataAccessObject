@@ -7,12 +7,15 @@ require_once("config.php");
 //$user->loadById(4);
 //echo($user);
 
+//LIST
 //Carregando lista de usuários
 
 // $lista = Usuario::getList();
 
 // echo(json_encode($lista));
 
+
+//SELECT
 //Carrega uma lista de usuários buscando pelo login
 
 // $search = Usuario::search("us");
@@ -27,11 +30,19 @@ require_once("config.php");
 
 // echo($usuario);
 
-// $aluno = new Usuario();
 
-// $aluno->setDeslogin("aluno123");
-// $aluno->setDessenha("@lun0");
+//INSERT
+// $aluno = new Usuario("victor", "victor123");
 
 // $aluno->insert();
 
 // echo($aluno);
+
+$usuario = new Usuario();
+
+$usuario->loadById(13);
+
+$usuario->update("VICTOR", "1234#$@%");
+
+echo($usuario);
+
